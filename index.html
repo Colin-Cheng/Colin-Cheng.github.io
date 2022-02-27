@@ -26,8 +26,10 @@
     const link = urlParams.get('link')
     console.log(link);
     
-    var element = document.getElementById("page"); 
-    element.setAttribute("data", link); 
+    if (!link) {
+      var element = document.getElementById("page"); 
+      element.setAttribute("data", link); 
+    }
   </script>
 
 </body>
