@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOH</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<script>
+function showResult (form) {
+    var res = form.link.value;
+    alert ("Your secure link is: " + "https://colin-cheng.github.io/?link=" + res);
+}
+</script>
+
+</head>
+  
+  
+<body>
+
+  <p>Please use this page to convert your site123 link into a secure link. The converted new link won't be blocked by WeChat.</p>
+
+  <form name="form" action="" method="GET">
+    <label for="link">Enter your site123 link here:</label><br>
+    <input type="text" id="link" name="link"><br>
+    <input type="button" name="button" value="Convert" onClick="showResult(this.form)">
+  </form>
+
+</body>
+</html>
