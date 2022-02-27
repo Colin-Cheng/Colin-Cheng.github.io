@@ -7,15 +7,6 @@
   
 <body>
   
-      
-  <script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const link = urlParams.get('link')
-    console.log(link);
-    document.getElementById('page').data = link;
-  </script>
-  
   <div> 
     <object type="text/html" id="page" data="https://621402095ef15.site123.me" 
             style="position:absolute;
@@ -27,6 +18,15 @@
                    width:100%;">
     </object>
  </div>
+  
+  
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const link = urlParams.get('link')
+    console.log(link);
+    document.getElementById('page').data = link;
+  </script>
 
 </body>
 </html>
