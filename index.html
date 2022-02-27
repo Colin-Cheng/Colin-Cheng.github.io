@@ -25,7 +25,9 @@
     const urlParams = new URLSearchParams(queryString);
     const link = urlParams.get('link')
     console.log(link);
-    document.getElementById('page').data = link;
+    
+    var element = document.getElementById("page"); 
+    element.setAttribute("data", link); 
   </script>
 
 </body>
