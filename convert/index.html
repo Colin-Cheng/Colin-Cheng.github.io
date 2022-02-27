@@ -7,15 +7,10 @@
 <script>
 function showResult (form) {
     var res = form.link.value;
-<<<<<<< HEAD
     var element_res = document.getElementById("result"); 
     var element_newLink = document.getElementById("newLink"); 
     element_res.setAttribute("style", ""); 
     element.innerHTML= "https://colin-cheng.github.io/?link=" + res;
-
-=======
-    alert ("Your secure link is: " + "https://colin-cheng.github.io/?link=" + res);
->>>>>>> a826d967a0e29374cecda6c8b5ecc0629c0e20d5
 }
 </script>
 
@@ -24,11 +19,7 @@ function showResult (form) {
   
 <body>
 
-<<<<<<< HEAD
   <p>Please enter the original site123 link below, and click "Convert" button. It will give you a new secure link, this new link won't be blocked by WeChat.</p>
-=======
-  <p>Please use this page to convert your site123 link into a secure link. The converted new link won't be blocked by WeChat.</p>
->>>>>>> a826d967a0e29374cecda6c8b5ecc0629c0e20d5
 
   <form name="form" action="" method="GET">
     <label for="link">Enter your site123 link here:</label><br>
@@ -36,14 +27,10 @@ function showResult (form) {
     <input type="button" name="button" value="Convert" onClick="showResult(this.form)">
   </form>
 
-<<<<<<< HEAD
   <div style="display: none;" id="result">
     <p>Your secure link is: </p>
     <p id="newLink" style="color:red"></p>
   </div>
 
-
-=======
->>>>>>> a826d967a0e29374cecda6c8b5ecc0629c0e20d5
 </body>
 </html>
