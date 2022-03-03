@@ -6,7 +6,6 @@
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
   
-  
 <body>
   
   <!-- <div> 
@@ -33,17 +32,41 @@
  </iframe>
   
   
-  <script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const link = urlParams.get('link')
-    console.log('link:', link);
-    
-    if (link!==null && link!=='') {
-      var element = document.getElementById("page"); 
-      element.setAttribute("data", link); 
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const link = urlParams.get('link')
+  console.log('link:', link);
+
+  var final_url = "https://62118991b0af7.site123.me";
+  
+  if (link!==null && link!=='') {
+    final_url = link;
+  }
+
+  var xhr = new XMLHttpRequest();
+  var userAgent = navigator.userAgent;
+  console.log(userAgent);
+
+  xhr.open('GET', final_url);
+  xhr.onreadystatechange = handler;
+  xhr.responseType = 'document';
+  xhr.setRequestHeader('User-Agent', userAgent);
+  xhr.send();
+
+  function handler() {
+    if (this.readyState === this.DONE) {
+      if (this.status === 200) {
+        // var data_url = URL.createObjectURL(this.response);
+        console.log(this.response);
+        document.getElementById("page").src = this.reponse;
+      } else {
+        console.error('Unsuccessful!');
+      }
     }
-  </script>
+  }
+
+</script>
 
 </body>
 </html>
