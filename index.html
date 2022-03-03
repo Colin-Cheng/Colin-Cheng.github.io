@@ -20,7 +20,7 @@
     </object>
  </div> -->
 
- <iframe src="https://62118991b0af7.site123.me/blog/10-rules-to-build-a-wildly-successful-business"
+ <iframe id="page" src="https://62118991b0af7.site123.me/blog/10-rules-to-build-a-wildly-successful-business"
  style="position:absolute;
                    top:0;
                    left:0;
@@ -44,27 +44,29 @@
     final_url = link;
   }
 
-  var xhr = new XMLHttpRequest();
-  var userAgent = navigator.userAgent;
-  console.log(userAgent);
+  document.getElementById("page").src = final_url;
 
-  xhr.open('GET', final_url);
-  xhr.onreadystatechange = handler;
-  xhr.responseType = 'document';
-  xhr.setRequestHeader('User-Agent', userAgent);
-  xhr.send();
+  // var xhr = new XMLHttpRequest();
+  // var userAgent = navigator.userAgent;
+  // console.log(userAgent);
 
-  function handler() {
-    if (this.readyState === this.DONE) {
-      if (this.status === 200) {
-        // var data_url = URL.createObjectURL(this.response);
-        console.log(this.response);
-        document.getElementById("page").src = this.reponse;
-      } else {
-        console.error('Unsuccessful!');
-      }
-    }
-  }
+  // xhr.open('GET', final_url);
+  // xhr.onreadystatechange = handler;
+  // xhr.responseType = 'document';
+  // xhr.setRequestHeader('User-Agent', userAgent);
+  // xhr.send();
+
+  // function handler() {
+  //   if (this.readyState === this.DONE) {
+  //     if (this.status === 200) {
+  //       // var data_url = URL.createObjectURL(this.response);
+  //       console.log(this.response);
+  //       document.getElementById("page").src = this.reponse;
+  //     } else {
+  //       console.error('Unsuccessful!');
+  //     }
+  //   }
+  // }
 
 </script>
 
