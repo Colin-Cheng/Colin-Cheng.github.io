@@ -4,11 +4,23 @@
 <title>HOH</title>
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
-  
-  
+
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
 <body>
+
+<div w3-include-html="https://621402095ef15.site123.me"></div> 
+
+<script>
+w3IncludeHTML();
+</script>
+
+</body>
   
-<!--   <div> 
+  
+<!-- <body>
+  
+  <div> 
     <object type="text/html" id="page" data="https://621402095ef15.site123.me" 
             style="position:absolute;
                    top:0;
@@ -19,22 +31,22 @@
                    width:100%;">
     </object>
  </div>
-   -->
   
-  <script>
-    // const queryString = window.location.search;
-    // const urlParams = new URLSearchParams(queryString);
-    // const link = urlParams.get('link')
-    // console.log(link);
+  
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const link = urlParams.get('link')
+    console.log(link);
     
-    // if (link!==null && link!=='') {
-    //   var element = document.getElementById("page"); 
-    //   element.setAttribute("data", link); 
-    // }
+    if (link!==null && link!=='') {
+      var element = document.getElementById("page"); 
+      element.setAttribute("data", link); 
+    }
 
     window.location.href = "https://621402095ef15.site123.me"
-  </script>
-
+</script>
+ -->
 
 </body>
 </html>
